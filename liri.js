@@ -127,3 +127,21 @@ function movieFunction() {
     //The user input will append to the log.txt file(ex. movie + movie title)
     fs.appendFile("log.txt", ", " + userInput + " " + alternateUserInput);
 };
+
+// // //Function needed for other
+function otherFunction() {
+    fs.readFile("random.txt", "utf8", function(error, body) {
+            console.log(body);
+            var bodyArr = body.split(", ");
+            if (bodyArr[0] === "tweets") {
+                twitterFunction();
+            } else if (bodyArr[0] === "song") {
+                spotifyFunction();
+            } else if (bodyArr[0] === "movie") {
+                movieFunction();
+            }
+
+        })
+        //The user input will append to the log.txt file(ex. other + my tweets)
+    fs.appendFile("log.txt", ", " + userInput + " " + alternateUserInput);
+};
