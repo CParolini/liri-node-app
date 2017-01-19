@@ -10,7 +10,7 @@ var twitterKeys = keys.twitterKeys;
 var userInput = process.argv[2];
 var alternateUserInput = process.argv[3];
 
-console.log('Enter "tweets", "song", "movie" or "other"');
+console.log('Enter "node liri.js + tweets, song "song title", movie "move title" or "other""');
 
 // //**********SWITCH CASE COMMAND**********
 
